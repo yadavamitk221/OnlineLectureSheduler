@@ -3,6 +3,7 @@ const LocalStrategy = require('passport-local').Strategy;
 const session = require('express-session');
 const app = express();
 const cors = require('cors');
+const path = require('path');
 
 // File Import
 const passportJWT = require('./Config/passport-jwt');
@@ -16,6 +17,7 @@ app.use(cors({
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
+app.use(express.static(path.resolve(__dirname,'build')));
 
 // Set up session
 app.use(session({ secret: 'your-secret-key', resave: false, saveUninitialized: false }));
