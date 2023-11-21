@@ -1,5 +1,4 @@
 const express = require('express');
-const LocalStrategy = require('passport-local').Strategy;
 const session = require('express-session');
 const app = express();
 const cors = require('cors');
@@ -29,6 +28,9 @@ app.use(passport.session());
 
 
 // All routes
+app.get('/', (req, res) => {
+  res.send('Home Page');
+}); 
 app.use('/', require('./Routers/index'));
 
 // Server setup
