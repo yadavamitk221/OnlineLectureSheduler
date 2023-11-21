@@ -1,0 +1,15 @@
+{
+    "builds": [
+      {
+        "src": "index.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      { "src": "/", "dest": "/index.js" },
+      { "src": "/auth/(.*)", "dest": "/index.js" },
+      { "src": "/instructor/(.*)", "dest": "/index.js" },
+      { "src": "/course/(.*)", "dest": "/index.js" },
+      { "src": "/lecture/(.*)", "dest": "/index.js" }
+    ]
+  }
