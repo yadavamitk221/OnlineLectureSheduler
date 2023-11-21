@@ -19,7 +19,7 @@ passport.use(
         } else {
           return done(null, false);
         }
-      })
+      })  
       .catch((err) => {
         return done(err, false);
       });

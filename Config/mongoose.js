@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://127.0.0.1/lectureSheduler');
+mongoose.connect('mongodb+srv://yadavamitk221:5pKqnMKTN8TZPKsa@cluster0.rhhuolk.mongodb.net/?retryWrites=true&w=majority');
 
 const db = mongoose.connection;
 
