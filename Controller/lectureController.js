@@ -3,7 +3,6 @@ const Lecture = require('../Models/lectures');
 exports.createLecture = async (req, res) => {
     try {
       const { title, date, description, course, instructor } = req.body;
-        console.log("")
       // Check if the instructor already has a lecture on the given date
       const existingLecture = await Lecture.findOne({ instructor, date });
   

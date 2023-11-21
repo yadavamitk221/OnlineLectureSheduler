@@ -19,7 +19,6 @@ passport.use(
       if (!user) {
         return done(null, false, { message: "Invalid credentials" });
       }
-      console.log(password, user.password);
 
       const passwordMatch = await bcrypt.compare(password, user.password);
       if (passwordMatch) {
