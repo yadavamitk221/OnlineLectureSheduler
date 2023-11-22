@@ -28,9 +28,7 @@ app.use(passport.session());
 
 
 // All routes
-app.get('/', (req, res) => {
-  res.send('Home Page');
-}); 
+
 app.use('/', require('./Routers/index'));
 
 // Server setup
