@@ -9,7 +9,7 @@ const passportJWT = require('./Config/passport-jwt');
 const db = require("./Config/mongoose");
 const passport = require('./Config/passport-local');
 
-app.use(cors({
+app.use(cors({   
   origin:true,
   credentials:true
 }));
@@ -24,7 +24,7 @@ app.use(session({ secret: 'your-secret-key', resave: false, saveUninitialized: f
 // Initialize Passport
 // app.use(express.urlencoded()); 
 app.use(passport.initialize());
-app.use(passport.session());
+app.use(passport.session());  
 
 
 // All routes
